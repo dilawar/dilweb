@@ -1,0 +1,46 @@
+\section{Map multiscale model onto Moose}
+\label{sec:multiscale}
+ 
+\paragraph{Structure} Structure of this module is following. 
+
+%file:src/multiscale.py
+<<multiscale>>=
+<<Import>>
+<<Local imports>>
+<<definition of class [[Multiscale]]>>
+@ %def multiscale 
+
+\paragraph{A skeleton of class}
+
+  Now we have parsed XML. We are passing the parsed XML in dictionary to a
+  method [[buildMultiscaleModel]] of this class. We know, what this class must
+  have at this point. Let's write it down and we'll wonder later how to add more
+  functionality. 
+  
+<<definition of class [[Multiscale]]>>=
+
+class Multiscale :
+  
+  def __init__(self, xmlDict) :
+    self.xmlDict = xmlDict 
+    <<initialize members>>
+
+  <<methods in class [[Multiscale]]>>
+
+  # This is the entry point of this class.
+  def buildMultiscaleModel(self) :
+      debug.printDebug("INFO", "Starting to build multiscale model")   
+      <<flow of executation>>
+  
+  <<tests in class [[Multiscale]]>>
+
+@ %def [[Multiscale]]
+
+Before we move on, lets discuss some models developed by others we need to
+import into moose.
+
+%\include{proto.nw}
+
+
+
+
