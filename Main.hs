@@ -1,5 +1,4 @@
 import System.Environment
-import System.Exit
 import System.Console.GetOpt
 import System.FilePath 
 import Data.Maybe
