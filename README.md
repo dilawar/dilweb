@@ -1,4 +1,4 @@
 dilweb
 ======
 
-A literate programming tool in Python
+A literate programming tool in Haskell.
